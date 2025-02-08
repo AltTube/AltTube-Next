@@ -38,7 +38,7 @@ export default function Likes() {
               <Link href={'/watch?v=' + video.id} key={video.id}>
                 <div className={'mt-4 p-4'}>
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_API_URL}${video.thumbnail_url}`}
+                    src={`${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}${video.thumbnail_url}`}
                     alt={`Thumbnail for ${video.title}`}
                     width={360}
                     height={240}

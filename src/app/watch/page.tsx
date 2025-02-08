@@ -91,12 +91,12 @@ function WatchInner() {
           {stream.item.hls && (
             <div>
               <Link
-                href={`${process.env.NEXT_PUBLIC_API_URL}${stream.item.hls}`}
+                href={`${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}${stream.item.hls}`}
               >
                 <p>m3u8</p>
               </Link>
               <Video
-                src={`${process.env.NEXT_PUBLIC_API_URL}${stream.item.hls}`}
+                src={`${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}${stream.item.hls}`}
               />
             </div>
           )}

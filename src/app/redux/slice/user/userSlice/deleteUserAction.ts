@@ -5,7 +5,7 @@ export const deleteUserAction = createAsyncThunk<
   { accessToken: string }, // accessToken as argument
   { rejectValue: string }
 >('user/deleteUser', async ({ accessToken }, { rejectWithValue }) => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/`, {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/user/`, {
     method: 'DELETE',
     headers: {
       Authorization: `Bearer ${accessToken}`,

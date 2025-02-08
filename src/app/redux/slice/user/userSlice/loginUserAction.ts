@@ -6,7 +6,7 @@ export const loginUserAction = createAsyncThunk<
   { rejectValue: { error: string } }
 >('user/loginUser', async ({ email, password }, { rejectWithValue }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/user/login`,
+    `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/user/login`,
     {
       method: 'POST',
       headers: {

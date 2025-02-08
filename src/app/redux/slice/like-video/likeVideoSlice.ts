@@ -27,7 +27,7 @@ export const fetchLikedVideos = createAsyncThunk<
 >(
   'likeVideos/fetchLikedVideos',
   async ({ accessToken }, { rejectWithValue }) => {
-    const fetchUrl = `${process.env.NEXT_PUBLIC_API_URL}/like`
+    const fetchUrl = `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/like`
     const response = await fetch(fetchUrl, {
       method: 'GET',
       headers: {
@@ -49,7 +49,7 @@ export const fetchLikeVideo = createAsyncThunk<
 >(
   'likeVideos/fetchLikeVideo',
   async ({ videoID, accessToken }, { rejectWithValue }) => {
-    const fetchUrl = `${process.env.NEXT_PUBLIC_API_URL}/like/${videoID}`
+    const fetchUrl = `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/like/${videoID}`
     const response = await fetch(fetchUrl, {
       method: 'GET',
       headers: {
@@ -71,7 +71,7 @@ export const addLikeVideo = createAsyncThunk<
 >(
   'likeVideos/addLikeVideo',
   async ({ videoID, accessToken }, { rejectWithValue }) => {
-    const fetchUrl = `${process.env.NEXT_PUBLIC_API_URL}/like/${videoID}`
+    const fetchUrl = `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/like/${videoID}`
     const response = await fetch(fetchUrl, {
       method: 'POST',
       headers: {
@@ -93,7 +93,7 @@ export const removeLikeVideo = createAsyncThunk<
 >(
   'likeVideos/removeLikeVideo',
   async ({ videoID, accessToken }, { rejectWithValue }) => {
-    const fetchUrl = `${process.env.NEXT_PUBLIC_API_URL}/like/${videoID}`
+    const fetchUrl = `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/like/${videoID}`
     const response = await fetch(fetchUrl, {
       method: 'DELETE',
       headers: {

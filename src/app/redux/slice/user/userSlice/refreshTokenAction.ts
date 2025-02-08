@@ -6,7 +6,7 @@ export const refreshTokenAction = createAsyncThunk<
   { rejectValue: { message: string } }
 >('user/refreshToken', async ({ refreshToken }, { rejectWithValue }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/user/refresh_token`,
+    `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/user/refresh_token`,
     {
       method: 'POST',
       headers: {

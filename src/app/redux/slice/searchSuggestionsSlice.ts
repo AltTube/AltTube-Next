@@ -19,7 +19,7 @@ export const fetchSearchSuggestions = createAsyncThunk<
 >(
   'searchSuggestions/fetchSearchSuggestions',
   async (query, { rejectWithValue }) => {
-    const fetchUrl = `${process.env.NEXT_PUBLIC_API_URL}/piped/opensearch/suggestions?query=${encodeURIComponent(query)}`
+    const fetchUrl = `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/piped/opensearch/suggestions?query=${encodeURIComponent(query)}`
     const response = await fetch(fetchUrl)
     if (!response.ok) {
       return rejectWithValue('Server error')

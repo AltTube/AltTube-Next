@@ -42,7 +42,7 @@ export const fetchDevices = createAsyncThunk<
   { accessToken: string },
   { rejectValue: string }
 >('devices/fetchDevices', async ({ accessToken }, { rejectWithValue }) => {
-  const fetchUrl = `${process.env.NEXT_PUBLIC_API_URL}/user/devices`
+  const fetchUrl = `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/user/devices`
   const response = await fetch(fetchUrl, {
     method: 'GET',
     headers: {
@@ -63,7 +63,7 @@ export const deleteDevices = createAsyncThunk<
 >(
   'devices/deleteDevices',
   async ({ ids, accessToken }, { rejectWithValue }) => {
-    const fetchUrl = `${process.env.NEXT_PUBLIC_API_URL}/user/devices`
+    const fetchUrl = `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/user/devices`
     const response = await fetch(fetchUrl, {
       method: 'DELETE',
       headers: {

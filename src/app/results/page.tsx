@@ -57,7 +57,7 @@ function ResultsInner() {
           <Link href={result.url} key={index}>
             <div className={'mt-4 p-4'}>
               <Image
-                src={`${process.env.NEXT_PUBLIC_API_URL}${result.thumbnail}`}
+                src={`${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}${result.thumbnail}`}
                 alt={`Thumbnail for ${result.title}`}
                 width={360}
                 height={240}

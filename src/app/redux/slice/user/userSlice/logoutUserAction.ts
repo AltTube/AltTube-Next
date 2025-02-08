@@ -6,7 +6,7 @@ export const logoutUserAction = createAsyncThunk<
   { rejectValue: string }
 >('user/logoutUser', async ({ accessToken }, { rejectWithValue }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/user/logout`,
+    `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/user/logout`,
     {
       method: 'POST',
       headers: {

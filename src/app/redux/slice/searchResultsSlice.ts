@@ -34,7 +34,7 @@ export const fetchSearchResults = createAsyncThunk<
 >(
   'searchResults/fetchSearchResults',
   async ({ query }, { rejectWithValue }) => {
-    const fetchUrl = `${process.env.NEXT_PUBLIC_API_URL}/piped/search?q=${encodeURIComponent(query)}`
+    const fetchUrl = `${process.env.NEXT_PUBLIC_ALTTUBE_API_URL}/piped/search?q=${encodeURIComponent(query)}`
     const response = await fetch(fetchUrl)
     if (!response.ok) {
       return rejectWithValue('Server error')
